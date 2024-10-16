@@ -39,3 +39,5 @@ virtualenv ENV
 cd ENV
 bin/activate
 pip install -r requirements.txt
+
+deactivate
