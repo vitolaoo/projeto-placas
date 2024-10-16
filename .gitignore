@@ -13,6 +13,7 @@ tesseract/
 train_dir/
 videos_teste/
 .env
+gitbash.txt
 # C extensions
 *.so
 
