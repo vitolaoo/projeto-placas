@@ -56,6 +56,7 @@ access_key = '[key]'
 search_images('abandoned cars', access_key, max_requests)
 ```
 b.  Feita a instalação dos modelos negativos, rode o programa negatives.py, isso vai gerar um .txt com o caminho das imagens
+
 c.  Criado o .txt, certifique-se que ele se encontra na pasta ./model
 
 2. Criando arquivo .vec para exemplos positivos:
