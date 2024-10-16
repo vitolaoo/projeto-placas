@@ -1,4 +1,4 @@
-# Treinamento de Haar Cascade para projeto de iniciação ciêntífica
+# Treinamento de Haar Cascade para projeto de Iniciação Científica
 
 Projeto baseado em visão computacional para identificação de placas de automóveis
 
@@ -22,6 +22,7 @@ cd projeto
 ```
 
 2.  Configurar .env
+```bash
 MYSQL_HOST = "host"
 MYSQL_PORT = 0000
 MYSQL_USER = "usuário"
@@ -29,6 +30,7 @@ MYSQL_PASSWORD = "senha"
 MYSQL_DB = "nome_database"
 TESSERACT_CMD = "C:\caminho\para\tesseract.exe"
 HAAR_MODEL_PATH = "C:\caminho\para\cascade.xml"
+```
 
 3.  Criação do ambiente virtual
 ```bash
