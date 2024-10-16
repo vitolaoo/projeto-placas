@@ -1,6 +1,6 @@
-# Treinamento de Haar Cascade para projeto placas_cd do 3º Semestre
+# Treinamento de Haar Cascade para projeto de iniciação ciêntífica
 
-descricao
+Projeto baseado em visão computacional para identificação de placas de automóveis
 
 ## Índice
 
@@ -17,12 +17,23 @@ Requisitos:
 
 1.  Clone o repositório:
 ```bash
-git clone https://github.com/guilhermefelipetto/projeto-placas-cd
+git clone https://github.com/vitolaoo/projeto-placas.git
 cd projeto
 ```
 
-2. Configure o Docker:
+2.  Configurar .env
+MYSQL_HOST = "host"
+MYSQL_PORT = 0000
+MYSQL_USER = "usuário"
+MYSQL_PASSWORD = "senha"
+MYSQL_DB = "nome_database"
+TESSERACT_CMD = "C:\caminho\para\tesseract.exe"
+HAAR_MODEL_PATH = "C:\caminho\para\cascade.xml"
+
+3.  Criação do ambiente virtual
 ```bash
-docker build -t project_image
-docker run -e MYSQL_HOST='host.docker.internal' -e MYSQL_USER='root' -e MYSQL_PASSWORD='root' -e MYSQL_DB='banco_placas' -e TESSERACT_CMD='/usr/bin/tesseract' -e HAAR_MODEL_PATH='/app/cascade/cascade.xml' -e TEST_VIDEO_PATH='/app/video.MTS' -it --name bpkedu project_image_bash
-```
+cd projeto
+virtualenv ENV
+cd ENV
+bin/activate
+pip install -r requirements.txt
