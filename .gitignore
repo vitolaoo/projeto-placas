@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+model/positives.txt
+model/positives20k.vec
+modelos_treinados/
+negatives/
+opencv/
+positves/RodoSol-ALPR
+tesseract/
+train_dir/
+videos_teste/
+.env
 # C extensions
 *.so
 
