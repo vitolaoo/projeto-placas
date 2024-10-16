@@ -68,7 +68,7 @@ a.  No código ./model/positives.py direcione os caminhos para os quatro diretó
         'C:/caminho/para/RodoSol-ALPR/images/motorcycles-br'
     ]
 ```
-        b.  Após direcionar os diretórios, escreva a quantidade de modelos positivos que deseja no num_samples
+    b.  Após direcionar os diretórios, escreva a quantidade de modelos positivos que deseja no num_samples
 ```bash
     num_samples = 9800  # Altere esse valor conforme necessário
     # Isso irá garantir que o .txt gerado distribua uniformemente os exemplos de cada tipo de imagem
