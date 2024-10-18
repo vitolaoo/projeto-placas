@@ -1,7 +1,7 @@
 import os
 
 diretorio = 'negatives'
-base_path = r'C:\Users\abvit\Documents\BPK\PROJETO-IC\placas-cd-dev\negatives'
+base_path = r'C:\Users\abvit\Documents\BPK\PROJETO-IC\projeto-placas\negatives'
 output_file = 'negatives.txt'
 
 with open(output_file, 'w') as f:

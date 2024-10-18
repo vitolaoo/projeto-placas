@@ -1,13 +1,13 @@
 @echo off
 echo Iniciando o treinamento do modelo...
 
-"Z:\placas_cd\opencv\build\x64\vc15\bin\opencv_traincascade.exe" ^
--data "Z:\placas_cd\train_dir" ^
+"C:\Users\abvit\Documents\BPK\IC\projeto-placas\opencv\build\x64\vc15\bin\opencv_traincascade.exe" ^
+-data "C:\Users\abvit\Documents\BPK\IC\projeto-placas\train_dir" ^
 -info positives.txt ^
 -vec positives20k.vec ^
 -bg negatives.txt ^
--numPos 8000 ^
--numNeg 8210 ^
+-numPos 40 ^
+-numNeg 40 ^
 -numStages 8 ^
 -precalcValBufSize 1024 ^
 -precalcIdxBufSize 1024 ^

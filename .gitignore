@@ -8,7 +8,7 @@ model/positives20k.vec
 modelos_treinados/
 negatives/
 opencv/
-positves/RodoSol-ALPR
+positves/
 tesseract/
 train_dir/
 videos_teste/

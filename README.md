@@ -7,7 +7,7 @@ Projeto baseado em visão computacional para identificação de placas de autom�
 - [Instalação](#instalação)
 - [Criação_de_Modelo](#Criação_de_Modelo)
 
-## Instalação
+## 1. Instalação
 
 Instruções passo a passo para rodar o projeto localmente.
 
@@ -16,13 +16,13 @@ Requisitos:
 - Docker 4.27.2+ 
 - Git
 
-## 1.  Clone o repositório:
+## 1.1.  Clone o repositório:
 ```bash
 git clone https://github.com/vitolaoo/projeto-placas.git
 cd projeto
 ```
 
-## 2.  Configurar .env
+## 1.2.  Configurar .env
 ```bash
 MYSQL_HOST = "host"
 MYSQL_PORT = 0000
@@ -33,7 +33,7 @@ TESSERACT_CMD = "C:\caminho\para\tesseract.exe"
 HAAR_MODEL_PATH = "C:\caminho\para\cascade.xml"
 ```
 
-## 3.  Criação do ambiente virtual
+## 1.3.  Criação do ambiente virtual
 ```bash
 cd projeto
 virtualenv ENV
@@ -44,9 +44,9 @@ pip install -r requirements.txt
 deactivate
 ```
 
-## Criação_de_Modelo
+## 2. Criação_de_Modelo
 
-## 1. Criando imagens negativas:
+## 2.1. Criando imagens negativas:
 Essa etapa é apenas para o caso de não possuir exemplos negativos para o treinamento do modelo
 
 a.  No código ./model/unplash_api.py coloque a chave de acesso da API em [KEY] e o prompt de pesquisa abaixo (recomendo promts como 'abandoned cars', 'street signs' ou 'famous brands logos' para "desafiar" o modelo com imagens negativas de carros sem placas e imagens com texto, afim de extrair o máximo de pontencial)
@@ -59,7 +59,7 @@ b.  Feita a instalação dos modelos negativos, rode o programa negatives.py, is
 
 c.  Criado o .txt, certifique-se que ele se encontra na pasta ./model
 
-## 2. Criando arquivo .vec para exemplos positivos:
+## 2.2. Criando arquivo .vec para exemplos positivos:
 
 a.  No código ./model/positives.py direcione os caminhos para os quatro diretórios de imagens
 
@@ -84,3 +84,5 @@ d.  Com o positives.txt criado e dentro da pasta model, abra o terminal no camin
 e.  Feito isso, o arquivo positives20k.vec deve ser gerado
 
 ## 3. Executando o treinamento:
+
+## 3.1.
