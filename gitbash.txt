@@ -1,3 +1,0 @@
-cd C:/Users/abvit/Documents/BPK/IC/projeto-placas
-
-git init
