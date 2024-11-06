@@ -36,10 +36,10 @@ def convert_annotations_to_positives(directories, output_file, num_samples):
 
 # Diretórios de entrada
 directories = [
-    'C:/Users/abvit/Documents/BPK/IC/projeto-placas/positives/RodoSol-ALPR/images/cars-me',
-    'C:/Users/abvit/Documents/BPK/IC/projeto-placas/positives/RodoSol-ALPR/images/cars-br',
-    #'C:/Users/abvit/Documents/BPK/IC/projeto-placas/positives/RodoSol-ALPR/images/motorcycles-me',
-    #'C:/Users/abvit/Documents/BPK/IC/projeto-placas/positives/RodoSol-ALPR/images/motorcycles-br'
+    'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/cars-me',
+    'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/cars-br',
+    #'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-me',
+    #'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-br'
 ]
 
 # Arquivo de saída

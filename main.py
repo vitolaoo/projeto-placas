@@ -41,8 +41,8 @@ if __name__ == "__main__":
     # Modelo HAAR Cascade (xml)
     model = getenv('HAAR_MODEL_PATH')
 
-    cap = cv2.VideoCapture(0) # webcam
-    # cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/PROJETO-IC/placas-cd-dev/videos_teste/focus.mp4") # video
+    # cap = cv2.VideoCapture(0) # webcam
+    cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/videocarros.MTS") # video
 
     desired_width = 640
     desired_height = 480

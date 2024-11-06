@@ -6,16 +6,16 @@ echo Iniciando o treinamento do modelo...
 -info positives.txt ^
 -vec positives20k.vec ^
 -bg negatives.txt ^
--numPos 40 ^
--numNeg 40 ^
--numStages 8 ^
--precalcValBufSize 1024 ^
--precalcIdxBufSize 1024 ^
+-numPos 4000 ^
+-numNeg 2000 ^
+-numStages 6 ^
+-precalcValBufSize 8192 ^
+-precalcIdxBufSize 8192 ^
 -featureType HAAR ^
 -w 60 ^
 -h 24 ^
 -mode ALL ^
--maxFalseAlarmRate 0.3 ^
--minHitRate 0.9 ^
--maxDepth 6 ^
--maxWeakCount 200
+-maxFalseAlarmRate 0.2 ^
+-minHitRate 0.98 ^
+-maxDepth 10 ^
+-maxWeakCount 300
