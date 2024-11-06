@@ -46,7 +46,7 @@ directories = [
 output_file = './model/positives.txt'
 
 # Número de amostras que você deseja gerar
-num_samples = 9800  # Altere esse valor conforme necessário
+num_samples = 740  # Altere esse valor conforme necessário
 
 # Chama a função para gerar o arquivo
 convert_annotations_to_positives(directories, output_file, num_samples)

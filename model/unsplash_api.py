@@ -45,6 +45,6 @@ def download_images(images):
                 print(f'downloaded: {filename}')
                 time.sleep(0.1)
 
-max_requests = 50000
-access_key = '[key]'
-search_images('urban shopping', access_key, max_requests)
+max_requests = 20
+access_key = 'a5YtoadoFEubHx4APeMhU5BmaybuHUtn8kK8XpSzHhA'
+search_images('gray texture', access_key, max_requests)

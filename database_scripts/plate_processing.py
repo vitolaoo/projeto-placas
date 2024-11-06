@@ -26,6 +26,7 @@ def plate_insert(conn, cursor, valid_plate: str):
 
 
 def detect_recognize_plate(frame, model: str, conn, cursor):
+    valid_plate_count = 0 #contagem de pontuacao
     try:
         plate_cascade = cv2.CascadeClassifier(model)
 
@@ -43,7 +44,12 @@ def detect_recognize_plate(frame, model: str, conn, cursor):
             if plate_is_valid(plate_text):
                 print("Placa valida:", plate_text)
                 plate_insert(conn, cursor, plate_text)
+                valid_plate_count += 1
                 sleep(5)
 
     except Exception as err:
         print(f"Ocorreu um erro: {err}")
+
+    return valid_plate_count
+
+

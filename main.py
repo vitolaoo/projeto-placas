@@ -41,11 +41,16 @@ if __name__ == "__main__":
     # Modelo HAAR Cascade (xml)
     model = getenv('HAAR_MODEL_PATH')
 
-    # cap = cv2.VideoCapture(0) # webcam
-    cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/videocarros.MTS") # video
+    #cap = cv2.VideoCapture(0) # webcam
+    #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/videocarros.MTS") # video
+    #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/focus.mp4")
+    #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/ruas1.mp4")
+    cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/BOSTA.mp4")
 
-    desired_width = 640
-    desired_height = 480
+    desired_width = 1240
+    desired_height = 860
+
+    valid_plate_total = 0 #variavel global de pontuacao
 
     while cap.isOpened():
         ret, frame = cap.read()
@@ -55,6 +60,9 @@ if __name__ == "__main__":
             break
 
         frame = cv2.resize(frame, (desired_width, desired_height))
+
+        valid_plate_count = detect_recognize_plate(frame=frame, model=model, conn=conn, cursor=cursor)
+        valid_plate_total += valid_plate_count  # Soma a contagem do frame ao total
 
         plate_result = detect_recognize_plate(frame=frame, model=model, conn=conn, cursor=cursor)
         # print(f'Resultado da detecção: {plate_result}')
@@ -69,6 +77,8 @@ if __name__ == "__main__":
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+    print(f"Total de placas válidas detectadas: {valid_plate_total}")  # Exibe o total ao final
 
     cap.release()
     cv2.destroyAllWindows()
