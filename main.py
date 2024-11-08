@@ -47,6 +47,7 @@ if __name__ == "__main__":
     #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/ruas1.mp4")
     #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/BOSTA.mp4")
     cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/MERDA.mp4")
+    #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/uno.mp4")
 
     desired_width = 1280
     desired_height = 720

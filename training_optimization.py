@@ -7,13 +7,13 @@ import shutil
 
 # Defina os intervalos dos parâmetros
 param_ranges = {
-    "numPos": (700, 900),
-    "numNeg": (206, 206),
-    "numStages": (12, 12),
-    "maxFalseAlarmRate": (0.18, 0.18),
-    "minHitRate": (0.86, 0.86),
-    "maxDepth": (12, 12),
-    "maxWeakCount": (207, 207)
+    "numPos": (200, 200),
+    "numNeg": (34, 34),
+    "numStages": (15, 20),
+    "maxFalseAlarmRate": (0.009, 0.009),
+    "minHitRate": (0.98, 0.98),
+    "maxDepth": (15, 15),
+    "maxWeakCount": (100, 100)
 }
 
 # Caminho para o train.bat e o diretório do train_dir
@@ -110,7 +110,7 @@ def save_results_to_csv(params, precision, total_detections, valid_plates):
         writer.writerow([params[key] for key in params] + [precision, total_detections, valid_plates])
 
 # Função principal para rodar iterações de teste
-def optimize_training(iterations=30):
+def optimize_training(iterations=10):
     for _ in range(iterations):
         params = generate_random_params()
         run_training_with_params(params)
@@ -120,4 +120,4 @@ def optimize_training(iterations=30):
         print(f"Parâmetros: {params} -> Precisão: {precision:.2%}, Detecções: {total_detections}, Placas Válidas: {valid_plates}")
 
 # Executar a otimização
-optimize_training(30)
+optimize_training(10)

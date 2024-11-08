@@ -3,12 +3,11 @@ import pytesseract
 from re import match
 from time import sleep
 
+import re
 
 def plate_is_valid(plate_text: str):
-    pattern = r'^[A-Z]{3}\d[A-Z]\d{2}$'
-
-    return match(pattern, plate_text) is not None
-
+    pattern = r'^[A-Z]{3}\d[A-Z]\d{2}$|^[A-Z]{3}\d{4}$'  #mercosul e antiga
+    return re.match(pattern, plate_text) is not None
 
 def plate_insert(conn, cursor, valid_plate: str):
     if conn.is_connected():

@@ -10,7 +10,7 @@ import matplotlib
 matplotlib.use('Agg')
 
 # Carregar dados
-df = pd.read_csv("training_results.csv")
+df = pd.read_csv("giant_database.csv")
 
 # Estatísticas e Outliers
 print("\nResumo estatístico dos parâmetros:")
@@ -96,3 +96,4 @@ print("\nSugestão de Parâmetros para Execução Única:")
 for param, value in best_params.items():
     print(f"{param}: {value}")
 
+#92

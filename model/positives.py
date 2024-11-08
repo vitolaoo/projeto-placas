@@ -38,15 +38,15 @@ def convert_annotations_to_positives(directories, output_file, num_samples):
 directories = [
     'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/cars-me',
     'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/cars-br',
-    #'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-me',
-    #'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-br'
+    'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-me',
+    'C:/Users/abvit/Documents/BPK/temp/positives/RodoSol-ALPR/images/motorcycles-br'
 ]
 
 # Arquivo de saída
 output_file = './model/positives.txt'
 
 # Número de amostras que você deseja gerar
-num_samples = 1140  # Altere esse valor conforme necessário
+num_samples = 2400  # Altere esse valor conforme necessário
 
 # Chama a função para gerar o arquivo
 convert_annotations_to_positives(directories, output_file, num_samples)

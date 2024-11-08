@@ -4,7 +4,6 @@ import requests
 import time
 from random import choice
 
-
 def search_images(query, access_key, max_requests, per_page=25):
     url = 'https://api.unsplash.com/search/photos'
     headers = {
@@ -38,13 +37,13 @@ def download_images(images):
         response = requests.get(image_url, stream=True)
         if response.status_code == 200:
             filename = image['id'] + f'_{i}' + f'{choice(range(10000, 99999))}' + '.jpg'
-            with open(f'negatives\\{filename}', 'wb') as f:
+            with open(f'negatives/farolcarros\\{filename}', 'wb') as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
                     i += 12
                 print(f'downloaded: {filename}')
                 time.sleep(0.1)
 
-max_requests = 20
-access_key = 'a5YtoadoFEubHx4APeMhU5BmaybuHUtn8kK8XpSzHhA'
-search_images('gray texture', access_key, max_requests)
+max_requests = 100
+access_key = 'pN9ub7yyj_Ky0LvednIIbwRD_K-SrfaP7ihzDmSZUhU'
+search_images('grass', access_key, max_requests)

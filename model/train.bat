@@ -6,17 +6,17 @@
         -info positives.txt ^
         -vec positives20k.vec ^
         -bg negatives.txt ^
-        -numPos 869 ^
-        -numNeg 206 ^
-        -numStages 12 ^
+        -numPos 500 ^
+        -numNeg 750 ^
+        -numStages 19 ^
         -precalcValBufSize 4096 ^
         -precalcIdxBufSize 4096 ^
         -featureType LBP ^
         -w 60 ^
         -h 24 ^
         -mode ALL ^
-        -maxFalseAlarmRate 0.18 ^
-        -minHitRate 0.86 ^
-        -maxDepth 12 ^
-        -maxWeakCount 207
+        -maxFalseAlarmRate 0.01 ^
+        -minHitRate 0.98 ^
+        -maxDepth 15 ^
+        -maxWeakCount 100
         
