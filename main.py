@@ -45,12 +45,14 @@ if __name__ == "__main__":
     #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/videocarros.MTS") # video
     #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/focus.mp4")
     #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/ruas1.mp4")
-    cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/BOSTA.mp4")
+    #cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/BOSTA.mp4")
+    cap = cv2.VideoCapture("C:/Users/abvit/Documents/BPK/IC/projeto-placas/videos_teste/MERDA.mp4")
 
-    desired_width = 1240
-    desired_height = 860
+    desired_width = 1280
+    desired_height = 720
 
     valid_plate_total = 0 #variavel global de pontuacao
+    total_detections_total = 0
 
     while cap.isOpened():
         ret, frame = cap.read()
@@ -61,8 +63,10 @@ if __name__ == "__main__":
 
         frame = cv2.resize(frame, (desired_width, desired_height))
 
-        valid_plate_count = detect_recognize_plate(frame=frame, model=model, conn=conn, cursor=cursor)
-        valid_plate_total += valid_plate_count  # Soma a contagem do frame ao total
+        valid_plate_count, total_detections = detect_recognize_plate(frame=frame, model=model, conn=conn, cursor=cursor)
+        
+        valid_plate_total += valid_plate_count           # Soma as placas válidas ao total
+        total_detections_total += total_detections       # Soma o total de detecções
 
         plate_result = detect_recognize_plate(frame=frame, model=model, conn=conn, cursor=cursor)
         # print(f'Resultado da detecção: {plate_result}')
@@ -78,7 +82,14 @@ if __name__ == "__main__":
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    print(f"Total de placas válidas detectadas: {valid_plate_total}")  # Exibe o total ao final
+    if total_detections_total > 0:
+        precision = valid_plate_total / total_detections_total
+    else:
+        precision = 0
+
+    print(f"Total de detecções: {total_detections_total}")
+    print(f"Total de placas válidas detectadas: {valid_plate_total}")
+    print(f"Precisão da detecção: {precision:.2%}")
 
     cap.release()
     cv2.destroyAllWindows()

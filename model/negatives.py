@@ -2,7 +2,7 @@ import os
 
 diretorio = 'negatives'
 base_path = r'C:\Users\abvit\Documents\BPK\IC\projeto-placas\negatives'
-output_file = 'negatives.txt'
+output_file = './model/negatives.txt'
 
 with open(output_file, 'w') as f:
     for arquivo in os.listdir(diretorio):

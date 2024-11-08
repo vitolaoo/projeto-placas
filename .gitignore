@@ -12,6 +12,8 @@ positves/
 tesseract/
 train_dir/
 videos_teste/
+graficos/
+training_results.csv
 .env
 gitbash.txt
 # C extensions
